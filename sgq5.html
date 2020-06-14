@@ -1,0 +1,129 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8" />
+    <title>SGQ - Sistema de Gestão da Qualidade</title>
+    <meta name="description" content="Redmine" />
+    <meta name="keywords" content="issue,bug,tracker" />
+    <meta content="authenticity_token" name="csrf-param" />
+    <meta content="XT0iI/hRnwDcxRE+a2hLlBHxMoZ2ijPsGJ6Z6+YotNU=" name="csrf-token" />
+    <link rel='shortcut icon' href='/favicon.ico' />
+    <link href="/css/jquery/jquery.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="/css/appcustom.css" media="all" rel="stylesheet" type="text/css" />
+
+
+    <!-- page specific tags -->
+    <link href="https://www.redmine.org/projects/redmine/activity.atom?show_messages=1" rel="alternate" title="ATOM" type="application/atom+xml" />
+</head>
+<body class="theme-Redmine project-redmine controller-boards action-index">
+    <div id="wrapper">
+        <div id="wrapper2">
+            <div id="wrapper3">
+                <div id="top-menu">
+                    <div id="account">
+                        <ul>
+                            <li><a id="signOut" href="index.html" class="login">Sair</a></li>
+                        </ul>
+                    </div>
+
+                    <ul>
+                        <li><a href="/" class="home">Página inicial</a></li>
+                        <li><a href="/projects" class="projects">Administrador</a></li>
+                        <li><a href="http://www.f1.com.br/" class="help">Ajuda</a></li>
+                    </ul>
+                </div>
+
+                <div id="header">
+                    <div id="quick-search">
+                        <form accept-charset="UTF-8" action="/projects/redmine/search" method="get">
+                            <div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+                            <input name="messages" type="hidden" value="1" />
+                            <label for='q'>
+                                <a href="/projects/redmine/search" accesskey="4">Busca</a>:
+                            </label>
+                            <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+                        </form>
+                    </div>
+
+                    <h1>SGQ</h1>
+
+                    <div id="main-menu">
+                        <ul>
+                            <li><a href="sgq.html">Pessoas</a></li>
+                            <li><a href="sgq1.html">Documentos</a></li>
+                            <li><a href="sgq2.html">Riscos</a></li>
+                            <li><a href="sgq3.html">Ações</a></li>
+                            <li><a href="sgq4.html">Comunicações</a></li>
+                            <li><a href="sgq5.html">Aprovações</a></li>
+                            <li><a href="sgq6.html">KPIs</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="main" class="">
+                    <div id="content">
+
+                        <h2>Aprovação</h2>
+
+                        <table class="list boards">
+                            <thead>
+                                <tr>
+                                    <th>Aprovação</th>
+                                    <th>Tipo</th>
+                                    <th>Departamento</th>
+                                    <th>Descrição</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="odd">
+                                    <td class="name" style="padding-left: 0px;">
+                                        <a href="/projects/redmine/boards/1" class="board">Contratação de Edson Arantes</a><br />
+                                    </td>
+                                    <td class="topic-count">Contrat</td>
+                                    <td class="message-count">RH</td>
+                                    <td class="last-message">
+                                        Adicionado por <a>Bernhard Rohloff</a> <a href="/projects/redmine/activity?from=2020-05-26" title="2020-05-26 05:54">aproximadamente 22 horas</a> atrás<br />
+                                        <a href="/boards/1/topics/59353">Contratação orçada para "Melhoria da área de supply chain." - Atividade #33220</a>
+                                    </td>
+                                    <td class="topic-count">Marcar reunião</td>
+
+                                </tr>
+                                <tr class="even">
+                                    <td class="name" style="padding-left: 0px;">
+                                        <a href="/projects/redmine/boards/2" class="board">Aprovação do relatório: Relatório Custos Projeto T.S. (06-04-2020).pdf </a><br />
+                                    </td>
+                                    <td class="topic-count">Documento</td>
+                                    <td class="message-count">Qualidade</td>
+                                    <td class="last-message">
+                                        Adicionado por <a href="/users/1565" class="user active">Mischa The Evil</a> <a href="/projects/redmine/activity?from=2020-05-27" title="2020-05-27 03:24">43 minutos</a> atrás<br />
+                                        <a href="/boards/2/topics/59352?r=59358#message-59358">Relatório pendente para seguimento da ação: Expandir as 3 novas fábricas no noroeste do país - Atividade #33275 </a>
+                                    </td>
+                                    <td class="topic-count">Aprovado</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div id="ajax-indicator" style="display:none;"><span>Carregando...</span></div>
+            <div id="ajax-modal" style="display:none;"></div>
+
+            <div id="footer">
+                <div class="bgl">
+                    <div class="bgr">
+                        Powered by <a href="https://www.pucminas.br/PucVirtual/Paginas/default.aspx">PUC MINAS EAD</a> &copy; 1958-2020 Puc Minas
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="js/vendor/jquery-3.1.0.js"></script>
+        <script src="js/vendor/bootstrap.min.js"></script>
+        <script src="js/vendor/aws-cognito-sdk.min.js"></script>
+        <script src="js/vendor/amazon-cognito-identity.min.js"></script>
+        <script src="js/config.js"></script>
+        <script src="js/cognito-auth.js"></script>
+        <script src="js/sgq6.js"></script>
+</body>
+</html>
