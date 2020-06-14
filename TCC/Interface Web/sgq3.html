@@ -1,0 +1,282 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8" />
+    <title>SGQ - Sistema de Gestão da Qualidade</title>
+    <meta name="description" content="Redmine" />
+    <meta name="keywords" content="issue,bug,tracker" />
+    <meta content="authenticity_token" name="csrf-param" />
+    <meta content="XT0iI/hRnwDcxRE+a2hLlBHxMoZ2ijPsGJ6Z6+YotNU=" name="csrf-token" />
+    <link rel='shortcut icon' href='/favicon.ico' />
+    <link href="/css/jquery/jquery.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="/css/appcustom.css" media="all" rel="stylesheet" type="text/css" />
+
+    <!-- page specific tags -->
+    <script src="/javascripts/context_menu.js?1370077906" type="text/javascript"></script>
+    <link href="/stylesheets/context_menu.css?1347200702" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body class="theme-Redmine project-redmine controller-versions action-index">
+    <div id="wrapper">
+        <div id="wrapper2">
+            <div id="wrapper3">
+                <div id="top-menu">
+                    <div id="account">
+                        <ul>
+                            <li><a id="signOut" href="index.html" class="login">Sair</a></li>
+                        </ul>
+                    </div>
+
+                    <ul>
+                        <li><a href="/" class="home">Página inicial</a></li>
+                        <li><a href="/projects" class="projects">Administrador</a></li>
+                        <li><a href="http://www.f1.com.br/" class="help">Ajuda</a></li>
+                    </ul>
+                </div>
+
+                <div id="header">
+                    <div id="quick-search">
+                        <form accept-charset="UTF-8" action="/projects/redmine/search" method="get">
+                            <div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+
+                            <label for='q'>
+                                <a href="/projects/redmine/search" accesskey="4">Busca</a>:
+                            </label>
+                            <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+                        </form>
+                    </div>
+
+                    <h1>SGQ</h1>
+
+                    <div id="main-menu">
+                        <ul>
+                            <li><a href="sgq.html">Pessoas</a></li>
+                            <li><a href="sgq1.html">Documentos</a></li>
+                            <li><a href="sgq2.html">Riscos</a></li>
+                            <li><a href="sgq3.html">Ações</a></li>
+                            <li><a href="sgq4.html">Comunicações</a></li>
+                            <li><a href="sgq5.html">Aprovações</a></li>
+                            <li><a href="sgq6.html">KPIs</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="main" class="">
+                    <div id="sidebar">
+                        <form accept-charset="UTF-8" action="/projects/redmine/roadmap" method="get">
+                            <div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+                            <h3>Planejamento</h3>
+                            <ul>
+                                <li>
+                                    <label>
+                                        <input checked="checked" name="tracker_ids[]" type="checkbox" value="1" />
+                                        Defect
+                                    </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        <input checked="checked" name="tracker_ids[]" type="checkbox" value="2" />
+                                        Feature
+                                    </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        <input checked="checked" name="tracker_ids[]" type="checkbox" value="3" />
+                                        Patch
+                                    </label>
+                                </li>
+                            </ul>
+                            <p></p>
+                            <ul>
+                                <li>
+                                    <label for="completed">
+                                        <input id="completed" name="completed" type="checkbox" value="1" /> Exibir versões completas
+                                    </label>
+                                </li>
+                                <li>
+                                    <input id="with_subprojects" name="with_subprojects" type="hidden" value="0" />
+                                    <label>
+                                        <input checked="checked" id="with_subprojects" name="with_subprojects" type="checkbox" value="1" /> Subprojetos
+                                    </label>
+                                </li>
+                            </ul>
+                            <p><input class="button-small" type="submit" value="Aplicar" /></p>
+                        </form>
+                        <h3>Versões</h3>
+                        <ul>
+                            <li>
+                                <a href="#4.0.8">4.0.8</a>
+                            </li>
+                            <li>
+                                <a href="#4.1.2">4.1.2</a>
+                            </li>
+                            <li>
+                                <a href="#4.2.0">4.2.0</a>
+                            </li>
+                            <li>
+                                <a href="#5.0.0">5.0.0</a>
+                            </li>
+                            <li>
+                                <a href="#Candidate_for_next_major_release">Candidate for next major release</a>
+                            </li>
+                            <li>
+                                <a href="#Candidate_for_next_minor_release">Candidate for next minor release</a>
+                            </li>
+                            <li>
+                                <a href="#Unplanned_backlogs">Unplanned backlogs</a>
+                            </li>
+                        </ul>
+                        <p>
+                            <a class="collapsible collapsed" href="#" id="toggle-completed-versions" onclick="$(&quot;#toggle-completed-versions&quot;).toggleClass(&quot;collapsed&quot;); $(&quot;#completed-versions&quot;).toggle(); return false;">Versões concluídas</a>
+                            <ul id="completed-versions" style="display:none;">
+                                <li><a href="/versions/1">0.7</a></li>
+                                <li><a href="/versions/3">0.7.1</a></li>
+                                <li><a href="/versions/4">0.7.2</a></li>
+                                <li><a href="/versions/5">0.7.3</a></li>
+                                <li><a href="/versions/2">0.8</a></li>
+                                <li><a href="/versions/7">0.8.1</a></li>
+                                <li><a href="/versions/8">0.8.2</a></li>
+                                <li><a href="/versions/9">0.8.3</a></li>
+                            </ul>
+                        </p>
+                    </div>
+
+                    <div id="content">
+
+                        <div class="contextual">
+
+                        </div>
+
+                        <h2>Plano de Ações</h2>
+
+                        <div id="roadmap">
+                            <h3 class="version"><a name="Exp">Expandir as 3 novas fábricas no noroeste do país.</a></h3>
+
+                            <p></p>
+
+                            <table class="progress progress-60" style="width: 40em;"><tr><td class="closed" style="width: 60%;"></td><td class="todo" style="width: 40%;"></td></tr></table><p class="percent">60%</p>
+                            <p class="progress-info">
+                                <a href="/projects/redmine/issues?fixed_version_id=161&amp;set_filter=1&amp;status_id=%2A">50 Atividades</a>
+                                &nbsp;
+                                (<a href="/projects/redmine/issues?fixed_version_id=161&amp;set_filter=1&amp;status_id=c">30 fechadas</a>
+                                &#8212;
+                                <a href="/projects/redmine/issues?fixed_version_id=161&amp;set_filter=1&amp;status_id=o">20 abertas</a>)
+                            </p>
+
+
+                            <form accept-charset="UTF-8" action="/projects/redmine/roadmap" method="post">
+                                <div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="XT0iI/hRnwDcxRE+a2hLlBHxMoZ2ijPsGJ6Z6+YotNU=" /></div>        <table class="list related-issues">
+                                    <caption>Tarefas relacionadas</caption>
+                                    <tr class="hascontextmenu">
+                                        <td class="checkbox"><input name="ids[]" type="checkbox" value="33275" /></td>
+                                        <td class="subject"><a href="/issues/33275" class="issue tracker-1 status-5 priority-4 priority-default closed">Atividade #33275</a>: Análise do mercado local.</td>
+                                    </tr>
+                                    <tr class="hascontextmenu">
+                                        <td class="checkbox"><input name="ids[]" type="checkbox" value="33310" /></td>
+                                        <td class="subject"><a href="/issues/33310" class="issue tracker-1 status-5 priority-4 priority-default closed">Atividade #33310</a>: Material mais barato com outros fornecedores.</td>
+                                    </tr>
+                                    <tr class="hascontextmenu">
+                                        <td class="checkbox"><input name="ids[]" type="checkbox" value="33459" /></td>
+                                        <td class="subject"><a href="/issues/33459" class="issue tracker-1 status-9 priority-4 priority-default">Atividade #33459</a>: Vender as unidades abaixo dos 90% de lucro.</td>
+                                    </tr>
+                                    <tr class="hascontextmenu">
+                                        <td class="checkbox"><input name="ids[]" type="checkbox" value="32341" /></td>
+                                        <td class="subject"><a href="/issues/32341" class="issue tracker-3 status-5 priority-4 priority-default closed">Atividade #32341</a>: Novo estudo preliminar de bonificação de vereadores</td>
+                                    </tr>
+                                </table>
+                            </form>
+                            <h3 class="version"><a href="/versions/162" name="4.1.2">Melhoria da área de supply chain.</a></h3>
+
+                            <p></p>
+
+                            <table class="progress progress-80" style="width: 40em;"><tr><td class="closed" style="width: 80%;"></td><td class="todo" style="width: 20%;"></td></tr></table><p class="percent">80%</p>
+                            <p class="progress-info">
+                                <a href="/projects/redmine/issues?fixed_version_id=162&amp;set_filter=1&amp;status_id=%2A">100 Atividades</a>
+                                &nbsp;
+                                (<a href="/projects/redmine/issues?fixed_version_id=162&amp;set_filter=1&amp;status_id=c">80 fechadas</a>
+                                &#8212;
+                                <a href="/projects/redmine/issues?fixed_version_id=162&amp;set_filter=1&amp;status_id=o">20 abertas</a>)
+                            </p>
+
+
+                            <form accept-charset="UTF-8" action="/projects/redmine/roadmap" method="post">
+                                <div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="XT0iI/hRnwDcxRE+a2hLlBHxMoZ2ijPsGJ6Z6+YotNU=" /></div>        <table class="list related-issues">
+                                    <caption>Tarefas relacionadas</caption>
+                                    <tr class="hascontextmenu">
+                                        <td class="checkbox"><input name="ids[]" type="checkbox" value="33220" /></td>
+                                        <td class="subject"><a href="/issues/33220" class="issue tracker-1 status-5 priority-4 priority-default closed">Atividade #33220</a>: Contratação de mais 20 funcionários sênior</td>
+                                    </tr>
+                                    <tr class="hascontextmenu">
+                                        <td class="checkbox"><input name="ids[]" type="checkbox" value="33273" /></td>
+                                        <td class="subject"><a href="/issues/33273" class="issue tracker-1 status-5 priority-4 priority-default closed">Atividade #33273</a>: Venda de ativos</td>
+                                    </tr>
+                                    <tr class="hascontextmenu">
+                                        <td class="checkbox"><input name="ids[]" type="checkbox" value="33281" /></td>
+                                        <td class="subject"><a href="/issues/33281" class="issue tracker-1 status-5 priority-4 priority-default closed">Atividade #33281</a>: Venda de inativos</td>
+                                    </tr>
+                                    <tr class="hascontextmenu">
+                                        <td class="checkbox"><input name="ids[]" type="checkbox" value="33283" /></td>
+                                        <td class="subject"><a href="/issues/33283" class="issue tracker-1 status-5 priority-4 priority-default closed">Atividade #33283</a>: Compra de materiais estruturantes</td>
+                                    </tr>
+                                    <tr class="hascontextmenu">
+                                        <td class="checkbox"><input name="ids[]" type="checkbox" value="33338" /></td>
+                                        <td class="subject"><a href="/issues/33338" class="issue tracker-1 status-1 priority-4 priority-default">Atividade #33338</a>: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+                                    </tr>
+                                    <tr class="hascontextmenu">
+                                        <td class="checkbox"><input name="ids[]" type="checkbox" value="33339" /></td>
+                                        <td class="subject"><a href="/issues/33339" class="issue tracker-1 status-5 priority-4 priority-default closed">Atividade #33339</a>: Etiam eget ligula eu lectus lobortis condimentum.</td>
+                                    </tr>
+                                    <tr class="hascontextmenu">
+                                        <td class="checkbox"><input name="ids[]" type="checkbox" value="33341" /></td>
+                                        <td class="subject"><a href="/issues/33341" class="issue tracker-1 status-5 priority-4 priority-default closed">Atividade #33341</a>: Aliquam nonummy auctor massa.</td>
+                                    </tr>
+                                    <tr class="hascontextmenu">
+                                        <td class="checkbox"><input name="ids[]" type="checkbox" value="33417" /></td>
+                                        <td class="subject"><a href="/issues/33417" class="issue tracker-1 status-5 priority-4 priority-default closed">Atividade #33417</a>: Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</td>
+                                    </tr>
+                                    <tr class="hascontextmenu">
+                                        <td class="checkbox"><input name="ids[]" type="checkbox" value="33452" /></td>
+                                        <td class="subject"><a href="/issues/33452" class="issue tracker-1 status-5 priority-4 priority-default closed">Atividade #33452</a>: Nulla at risus.</td>
+                                    </tr>
+                                    <tr class="hascontextmenu">
+                                        <td class="checkbox"><input name="ids[]" type="checkbox" value="33268" /></td>
+                                        <td class="subject"><a href="/issues/33268" class="issue tracker-3 status-1 priority-3 priority-lowest">Atividade #33268</a>: Quisque purus magna, auctor et, sagittis ac, posuere eu, lectus: Nam mattis, felis ut adipiscing.</td>
+                                    </tr>
+                                </table>
+                            </form>
+                        </div>
+
+
+
+                        <script type="text/javascript">
+                            //<![CDATA[
+                            contextMenuInit('/issues/context_menu')
+//]]>
+                        </script>
+
+
+                        <div style="clear:both;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="ajax-indicator" style="display:none;"><span>Carregando...</span></div>
+            <div id="ajax-modal" style="display:none;"></div>
+
+            <div id="footer">
+                <div class="bgl">
+                    <div class="bgr">
+                        Powered by <a href="https://www.pucminas.br/PucVirtual/Paginas/default.aspx">PUC MINAS EAD</a> &copy; 1958-2020 Puc Minas
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/vendor/jquery-3.1.0.js"></script>
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="js/vendor/aws-cognito-sdk.min.js"></script>
+    <script src="js/vendor/amazon-cognito-identity.min.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/cognito-auth.js"></script>
+    <script src="js/sgq6.js"></script>
+</body>
+</html>

@@ -1,0 +1,285 @@
+<?xml version='1.0'?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg width='800' height='300' viewBox='0 0 800 300' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:a3='http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/' a3:scriptImplementation='Adobe'>
+<!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\-->
+<!-- Created with SVG::Graph -->
+<!-- SVG::Graph by Sean E. Russell -->
+<!-- Losely based on SVG::TT::Graph for Perl by Leo Lapworth & Stephan Morgan -->
+<!-- //////////////////////////////////////////////////////////////////-->
+<defs>
+<style type='text/css'>
+<![CDATA[/* Copy from here for external style sheet */
+.svgBackground{
+  fill:#ffffff;
+}
+.graphBackground{
+  fill:#f0f0f0;
+}
+
+/* graphs titles */
+.mainTitle{
+  text-anchor: middle;
+  fill: #000000;
+  font-size: 16px;
+  font-family: "Arial", sans-serif;
+  font-weight: normal;
+}
+.subTitle{
+  text-anchor: middle;
+  fill: #999999;
+  font-size: 14px;
+  font-family: "Arial", sans-serif;
+  font-weight: normal;
+}
+
+.axis{
+  stroke: #000000;
+  stroke-width: 1px;
+}
+
+.guideLines{
+  stroke: #666666;
+  stroke-width: 1px;
+  stroke-dasharray: 5 5;
+}
+
+.xAxisLabels{
+  text-anchor: middle;
+  fill: #000000;
+  font-size: 12px;
+  font-family: "Arial", sans-serif;
+  font-weight: normal;
+}
+
+.yAxisLabels{
+  text-anchor: end;
+  fill: #000000;
+  font-size: 12px;
+  font-family: "Arial", sans-serif;
+  font-weight: normal;
+}
+
+.xAxisTitle{
+  text-anchor: middle;
+  fill: #ff0000;
+  font-size: 14px;
+  font-family: "Arial", sans-serif;
+  font-weight: normal;
+}
+
+.yAxisTitle{
+  fill: #ff0000;
+  text-anchor: middle;
+  font-size: 14px;
+  font-family: "Arial", sans-serif;
+  font-weight: normal;
+}
+
+.dataPointLabel{
+  fill: #000000;
+  text-anchor:middle;
+  font-size: 10px;
+  font-family: "Arial", sans-serif;
+  font-weight: normal;
+}
+
+.staggerGuideLine{
+  fill: none;
+  stroke: #000000;
+  stroke-width: 0.5px;  
+}
+
+/* default fill styles for multiple datasets (probably only use a single dataset on this graph though) */
+.key1,.fill1{
+	fill: #ff0000;
+	fill-opacity: 0.5;
+	stroke: none;
+	stroke-width: 0.5px;	
+}
+.key2,.fill2{
+	fill: #0000ff;
+	fill-opacity: 0.5;
+	stroke: none;
+	stroke-width: 1px;	
+}
+.key3,.fill3{
+	fill: #00ff00;
+	fill-opacity: 0.5;
+	stroke: none;
+	stroke-width: 1px;	
+}
+.key4,.fill4{
+	fill: #ffcc00;
+	fill-opacity: 0.5;
+	stroke: none;
+	stroke-width: 1px;	
+}
+.key5,.fill5{
+	fill: #00ccff;
+	fill-opacity: 0.5;
+	stroke: none;
+	stroke-width: 1px;	
+}
+.key6,.fill6{
+	fill: #ff00ff;
+	fill-opacity: 0.5;
+	stroke: none;
+	stroke-width: 1px;	
+}
+.key7,.fill7{
+	fill: #00ffff;
+	fill-opacity: 0.5;
+	stroke: none;
+	stroke-width: 1px;	
+}
+.key8,.fill8{
+	fill: #ffff00;
+	fill-opacity: 0.5;
+	stroke: none;
+	stroke-width: 1px;	
+}
+.key9,.fill9{
+	fill: #cc6666;
+	fill-opacity: 0.5;
+	stroke: none;
+	stroke-width: 1px;	
+}
+.key10,.fill10{
+	fill: #663399;
+	fill-opacity: 0.5;
+	stroke: none;
+	stroke-width: 1px;	
+}
+.key11,.fill11{
+	fill: #339900;
+	fill-opacity: 0.5;
+	stroke: none;
+	stroke-width: 1px;	
+}
+.key12,.fill12{
+	fill: #9966FF;
+	fill-opacity: 0.5;
+	stroke: none;
+	stroke-width: 1px;	
+}
+
+
+.keyText{
+  fill: #000000;
+  text-anchor:start;
+  font-size: 10px;
+  font-family: "Arial", sans-serif;
+  font-weight: normal;
+}
+/* End copy for external style sheet */
+]]>
+</style>
+</defs>
+<!-- include default stylesheet if none specified -->
+<!--SVG Background-->
+<rect width='800' height='300' x='0' y='0' class='svgBackground'/>
+<g transform='translate( 35.8 26 )'>
+<rect x='0' y='0' width='675.2' height='255' class='graphBackground'/>
+<path d='M 0 0 v255' class='axis' id='xAxis'/>
+<path d='M 0 255 h675.2' class='axis' id='yAxis'/>
+<text class='xAxisLabels' x='28.133333333333336' y='270' style='text-anchor: middle'>
+Junho
+</text>
+<text class='xAxisLabels' x='140.66666666666669' y='270' style='text-anchor: middle'>
+Agosto
+</text>
+<text class='xAxisLabels' x='253.20000000000002' y='270' style='text-anchor: middle'>
+Outubro
+</text>
+<text class='xAxisLabels' x='365.73333333333335' y='270' style='text-anchor: middle'>
+Dezembro
+</text>
+<text class='xAxisLabels' x='478.2666666666667' y='270' style='text-anchor: middle'>
+Fevereiro
+</text>
+<text class='xAxisLabels' x='590.8000000000001' y='270' style='text-anchor: middle'>
+Abril
+</text>
+<text x='-3' y='259.0' class='yAxisLabels' style='text-anchor: end'>
+0
+</text>
+<text x='-3' y='235.9' class='yAxisLabels' style='text-anchor: end'>
+111
+</text>
+<path d='M0 231.9 h675.2' class='guideLines'/>
+<text x='-3' y='212.8' class='yAxisLabels' style='text-anchor: end'>
+222
+</text>
+<path d='M0 208.8 h675.2' class='guideLines'/>
+<text x='-3' y='189.7' class='yAxisLabels' style='text-anchor: end'>
+333
+</text>
+<path d='M0 185.7 h675.2' class='guideLines'/>
+<text x='-3' y='166.6' class='yAxisLabels' style='text-anchor: end'>
+444
+</text>
+<path d='M0 162.6 h675.2' class='guideLines'/>
+<text x='-3' y='143.5' class='yAxisLabels' style='text-anchor: end'>
+555
+</text>
+<path d='M0 139.5 h675.2' class='guideLines'/>
+<text x='-3' y='120.39999999999998' class='yAxisLabels' style='text-anchor: end'>
+666
+</text>
+<path d='M0 116.39999999999998 h675.2' class='guideLines'/>
+<text x='-3' y='97.29999999999998' class='yAxisLabels' style='text-anchor: end'>
+777
+</text>
+<path d='M0 93.29999999999998 h675.2' class='guideLines'/>
+<text x='-3' y='74.19999999999999' class='yAxisLabels' style='text-anchor: end'>
+888
+</text>
+<path d='M0 70.19999999999999 h675.2' class='guideLines'/>
+<text x='-3' y='51.099999999999994' class='yAxisLabels' style='text-anchor: end'>
+999
+</text>
+<path d='M0 47.099999999999994 h675.2' class='guideLines'/>
+<text x='-3' y='28.0' class='yAxisLabels' style='text-anchor: end'>
+1110
+</text>
+<path d='M0 24.0 h675.2' class='guideLines'/>
+<rect x='0.0' y='231.27567567567567' width='23.133333333333336' height='23.724324324324325' class='fill1'/>
+<rect x='23.133333333333336' y='139.08378378378376' width='23.133333333333336' height='115.91621621621623' class='fill2'/>
+<rect x='56.26666666666667' y='252.7108108108108' width='23.133333333333336' height='2.289189189189189' class='fill1'/>
+<rect x='79.4' y='251.04594594594596' width='23.133333333333336' height='3.9540540540540543' class='fill2'/>
+<rect x='112.53333333333335' y='237.72702702702702' width='23.133333333333336' height='17.272972972972973' class='fill1'/>
+<rect x='135.66666666666669' y='175.5027027027027' width='23.133333333333336' height='79.49729729729731' class='fill2'/>
+<rect x='168.8' y='222.53513513513514' width='23.133333333333336' height='32.464864864864865' class='fill1'/>
+<rect x='191.93333333333334' y='121.8108108108108' width='23.133333333333336' height='133.1891891891892' class='fill2'/>
+<rect x='225.0666666666667' y='190.27837837837836' width='23.133333333333336' height='64.72162162162162' class='fill1'/>
+<rect x='248.20000000000002' y='35.02972972972972' width='23.133333333333336' height='219.97027027027028' class='fill2'/>
+<rect x='281.33333333333337' y='163.84864864864863' width='23.133333333333336' height='91.15135135135135' class='fill1'/>
+<rect x='304.4666666666667' y='108.07567567567565' width='23.133333333333336' height='146.92432432432435' class='fill2'/>
+<rect x='337.6' y='238.14324324324323' width='23.133333333333336' height='16.85675675675676' class='fill1'/>
+<rect x='360.73333333333335' y='136.79459459459457' width='23.133333333333336' height='118.20540540540541' class='fill2'/>
+<rect x='393.86666666666673' y='238.35135135135135' width='23.133333333333336' height='16.64864864864865' class='fill1'/>
+<rect x='417.00000000000006' y='188.8216216216216' width='23.133333333333336' height='66.17837837837838' class='fill2'/>
+<rect x='450.1333333333334' y='242.0972972972973' width='23.133333333333336' height='12.902702702702703' class='fill1'/>
+<rect x='473.2666666666667' y='215.45945945945945' width='23.133333333333336' height='39.54054054054054' class='fill2'/>
+<rect x='506.40000000000003' y='238.55945945945945' width='23.133333333333336' height='16.440540540540542' class='fill1'/>
+<rect x='529.5333333333334' y='55.008108108108104' width='23.133333333333336' height='199.9918918918919' class='fill2'/>
+<rect x='562.6666666666667' y='231.9' width='23.133333333333336' height='23.1' class='fill1'/>
+<rect x='585.8000000000001' y='182.78648648648647' width='23.133333333333336' height='72.21351351351352' class='fill2'/>
+<rect x='618.9333333333334' y='241.6810810810811' width='23.133333333333336' height='13.31891891891892' class='fill1'/>
+<rect x='642.0666666666667' y='171.75675675675677' width='23.133333333333336' height='83.24324324324324' class='fill2'/>
+<g/>
+</g>
+<text x='400' y='16' class='mainTitle'>
+Commits por mês
+</text>
+<g transform='translate(721.0 46)'>
+<rect x='0' y='0' width='12' height='12' class='key1'/>
+<text x='17' y='12' class='keyText'>
+Revisões
+</text>
+<rect x='0' y='17' width='12' height='12' class='key2'/>
+<text x='17' y='29' class='keyText'>
+Alterações
+</text>
+</g>
+</svg>
