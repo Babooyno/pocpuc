@@ -1,7 +1,6 @@
-/*global _config*/
-
 var SGQ6 = window.SGQ6 || {};
 
+//Verifica se o token foi recebido para redirecionar para a página de login
 (function rideScopeWrapper($) {
     var authToken;
     SGQ6.authToken.then(function setAuthToken(token) {
@@ -15,14 +14,15 @@ var SGQ6 = window.SGQ6 || {};
         window.location.href = '/signin.html';
     });
 
+//Função de envio de parâmetros para calcular KPI
     function sendKPI() {
         $.ajax({
             method: 'POST',
             url: _config.api.invokeUrl + '/kpi-post',
             headers: {
-                Authorization: authToken
+                Authorization: authToken //Token recebido AWS Cognito
             },
-            data: JSON.stringify({
+            data: JSON.stringify({ //Parâmetros
                 KPI: {
                     p1: $('#param1').val(),
                     p2: $('#param2').val(),
@@ -39,18 +39,17 @@ var SGQ6 = window.SGQ6 || {};
             contentType: 'application/json',
             success: completeRequest,
             error: function ajaxError(jqXHR, textStatus, errorThrown) {
-                //alert('Error requesting: ', textStatus, ', Details: ', errorThrown);
-                //alert('Response: ', jqXHR.responseText);
                 alert('Um erro ocorreu na requisição:\n' + jqXHR.responseText);
             }
         });
     }
 
+    // Função de exibição dos dados retornados.
     function completeRequest(result) {        
         displayUpdate('KPI 1: ' + result.KPI1 + ' | KPI 2: ' + result.KPI2 + ' | KPI 3: ' + result.KPI3 + ' | KPI 4: ' + result.KPI4 + ' | KPI 5: ' + result.KPI5 + ' | KPI 6: ' + result.KPI6 + ' | KPI 7: ' + result.KPI7);  
     }
 
-    // Register click handler for #request button
+    // Handler de requisição dos KPIs e de Logout da aplicação
     $(function onDocReady() {
         $('#request').click(handleRequestClick);
         $('#signOut').click(function() {
@@ -59,20 +58,22 @@ var SGQ6 = window.SGQ6 || {};
             window.location = "signin.html";
         });
 
-        if (!_config.api.invokeUrl) {
+        if (!_config.api.invokeUrl) { // Caso não exista parametros no config
             $('#noApiMessage').show();
         }
 
-        $('#auth').click(function () {
+        $('#auth').click(function () { //Mostra token
             displayUpdate(authToken);
         });
     });
 
+    // Handler de requisição de enio
     function handleRequestClick(event) {
         event.preventDefault();        
         sendKPI();         
     }
 
+    //Função de display em tela.
     function displayUpdate(text) {
         $('#updates').append($('<li>' + text + '</li>'));
     }

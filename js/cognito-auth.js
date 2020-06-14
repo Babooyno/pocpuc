@@ -1,7 +1,6 @@
-/*_config AmazonCognitoIdentity AWSCognito*/
-
 var SGQ6 = window.SGQ6 || {};
 
+// Funções de manipulação da chave de autenticação
 (function scopeWrapper($) {
     var signinUrl = 'signin.html';
 
@@ -47,36 +46,14 @@ var SGQ6 = window.SGQ6 || {};
         }
     });
 
-
-    /*
-     * Cognito User Pool functions
-     */
-
-    function register(email, password, onSuccess, onFailure) {
-        var dataEmail = {
-            Name: 'email',
-            Value: email
-        };
-        var attributeEmail = new AmazonCognitoIdentity.CognitoUserAttribute(dataEmail);
-
-        userPool.signUp(email, password, [attributeEmail], null,
-            function signUpCallback(err, result) {
-                if (!err) {
-                    onSuccess(result);
-
-                } else {
-                    onFailure(err);
-                }
-            }
-        );
-    }
-
+    // Função para validar autenticação de usuário e senha.
     function signin(email, password, onSuccess, onFailure) {
         var authenticationDetails = new AmazonCognitoIdentity.AuthenticationDetails({
             Username: email,
             Password: password
         });
 
+        // Função de autenticação de usuário
         var cognitoUser = createCognitoUser(email);
         cognitoUser.authenticateUser(authenticationDetails, {
             onSuccess: onSuccess,
@@ -84,16 +61,7 @@ var SGQ6 = window.SGQ6 || {};
         });
     }
 
-    function verify(email, code, onSuccess, onFailure) {
-        createCognitoUser(email).confirmRegistration(code, true, function confirmCallback(err, result) {
-            if (!err) {
-                onSuccess(result);
-            } else {
-                onFailure(err);
-            }
-        });
-    }
-
+    //Cria usuário para validação
     function createCognitoUser(email) {
         return new AmazonCognitoIdentity.CognitoUser({
             Username: email,
@@ -102,15 +70,14 @@ var SGQ6 = window.SGQ6 || {};
     }
 
     /*
-     *  Event Handlers
+     *  Eventos
      */
 
     $(function onDocReady() {
         $('#signinForm').submit(handleSignin);
-        $('#registrationForm').submit(handleRegister);
-       // $('#signinForm').submit(handleVerify);
     });
 
+    //Valida usuário inserido na página e redireciona para aplicação.
     function handleSignin(event) {
         var email = $('#emailInputSignin').val();
         var password = $('#passwordInputSignin').val();
@@ -124,47 +91,5 @@ var SGQ6 = window.SGQ6 || {};
                 alert(err);
             }
         );
-    }
-
-    function handleRegister(event) {
-        var email = $('#emailInputRegister').val();
-        var password = $('#passwordInputRegister').val();
-        var password2 = $('#password2InputRegister').val();
-
-        var onSuccess = function registerSuccess(result) {
-            var cognitoUser = result.user;
-            console.log('user name is ' + cognitoUser.getUsername());
-            var confirmation = ('Registration successful. Please check your email inbox or spam folder for your verification code.');
-            if (confirmation) {
-                window.location.href = 'verify.html';
-            }
-        };
-        var onFailure = function registerFailure(err) {
-            alert(err);
-        };
-        event.preventDefault();
-
-        if (password === password2) {
-            register(email, password, onSuccess, onFailure);
-        } else {
-            alert('Passwords do not match');
-        }
-    }
-
-    function handleVerify(event) {
-        var email = $('#emailInputSignin').val();
-        var code = $('#codeInputVerify').val();
-        event.preventDefault();
-        verify(email, code,
-            function verifySuccess(result) {
-                console.log('call result: ' + result);
-                console.log('Successfully verified');
-                alert('Verification successful. You will now be redirected to the login page.');
-                window.location.href = signinUrl;
-            },
-            function verifyError(err) {
-                alert(err);
-            }
-        );
-    }
+    }  
 }(jQuery));
